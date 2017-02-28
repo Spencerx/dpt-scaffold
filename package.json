@@ -1,0 +1,12 @@
+{
+  "name": "dpt-scaffold",
+  "version": "0.1.0",
+  "description": "File scaffolding utility for dpt",
+  "main": "index.js",
+  "repository": "https://github.com/yandex/dpt-scaffold",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "through": "^2.3.8",
+    "vinyl-fs": "^2.4.4"
+  }
+}
