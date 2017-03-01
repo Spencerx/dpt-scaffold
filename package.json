@@ -1,12 +1,19 @@
 {
-  "name": "dpt-scaffold",
-  "version": "0.1.0",
-  "description": "File scaffolding utility for dpt",
-  "main": "index.js",
-  "repository": "https://github.com/yandex/dpt-scaffold",
-  "license": "MPL-2.0",
-  "dependencies": {
-    "through": "^2.3.8",
-    "vinyl-fs": "^2.4.4"
-  }
+    "name": "dpt-scaffold",
+    "version": "0.1.0",
+    "description": "File scaffolding utility for dpt",
+    "bin": {
+        "dpt-scaffold": "bin/dpt-scaffold.js"
+    },
+    "main": "index.js",
+    "repository": "https://github.com/yandex/dpt-scaffold",
+    "license": "MPL-2.0",
+    "dependencies": {
+        "bluebird": "^3.4.7",
+        "handlebars": "^4.0.6",
+        "inquirer": "^3.0.5",
+        "istextorbinary": "^2.1.0",
+        "through": "^2.3.8",
+        "vinyl-fs": "^2.4.4"
+    }
 }
