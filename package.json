@@ -1,6 +1,6 @@
 {
     "name": "dpt-scaffold",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "File scaffolding utility for dpt",
     "bin": {
         "dpt-scaffold": "bin/dpt-scaffold.js"
