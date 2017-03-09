@@ -1,7 +1,7 @@
 var vfs = require('vinyl-fs');
 var through = require('through');
 var Handlebars = require('handlebars');
-var isTextOrBinary = require('istextorbinary');
+var isBinaryFile = require('isbinaryfile');
 
 var Path = require('path');
 
@@ -18,8 +18,8 @@ module.exports = function(source, dest, config) {
             file.path = Handlebars.compile(file.path)(config);
 
             // If file has textual contents
-            if (isTextOrBinary.isTextSync(file.path, file.contents)) {
-                var source = file.contents.toString(isTextOrBinary.getEncodingSync(file.contents));
+            if (!isBinaryFile.sync(file.contents, file.stat.size)) {
+                var source = file.contents.toString('utf8');
                 file.contents = new Buffer(Handlebars.compile(source)(config));
             }
             return this.queue(file);
