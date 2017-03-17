@@ -19,6 +19,7 @@ function go(source, dest) {
             var defaults = JSON.parse(data);
             var questions = _.map(defaults, function(v, k) {
                 return {
+                    type: typeof v === 'boolean' ? 'confirm' : 'input',
                     name: k,
                     message: k,
                     default: v
