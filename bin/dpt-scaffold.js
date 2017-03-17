@@ -30,7 +30,7 @@ function go(source, dest) {
                 });
         })
         .catch(function(e) {
-            throw new Error('Could not read config file at ' + configPath);
+            throw new Error('Could not read config file at ' + configPath + '\n' + e.message);
         })
 }
 
